@@ -1,1 +1,13 @@
-
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style/global.css') }}">
+    <style media="screen">{% block style %}{% endblock %}</style>
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+      {% block body %}{% endblock %}
+  </body>
+</html>

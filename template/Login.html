@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Title{% endblock %}
+{% block head %}<link rel="stylesheet" href="{{ url_for('static',filename='style/login-register.css') }}">{% endblock %}
+{% block body %}
+<div class="form-div">
+  <img class="logo" src="{{ url_for('static',filename='images/temp logo.png') }}" alt="slika">
+  <form action="/" method="post">
+    <label for=""></label>
+    <input required id="email" class="form-input-fields" type=="email" name="email" placeholder="Email">
+    <br><br>
+    <input required minlength="8" id="password" class="form-input-fields" type="password" name="password" placeholder="Password">
+    <br>
+    <button class="submit-button" type="submit" name="button">Login</button>
+    <br>
+    <a class="" href="/register/">Don't have an account?</a>
+    <br>
+    <p>{{text}}</p>
+  </form>
+</div>
+{% endblock %}
